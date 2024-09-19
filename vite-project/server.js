@@ -1,6 +1,9 @@
 import express from 'express';
+import cors from 'cors';
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 const quotes = [
   "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
