@@ -1,19 +1,19 @@
-import express from 'express';
-import cors from 'cors';
+import express from "express";
+import cors from "cors";
 const app = express();
 const port = 3000;
 
 app.use(cors());
 
 const quotes = [
-  "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
-  "The way to get started is to quit talking and begin doing. - Walt Disney",
-  "Your time is limited, so don't waste it living someone else's life. - Steve Jobs",
-  "If life were predictable it would cease to be life, and be without flavor. - Eleanor Roosevelt",
-  "If you look at what you have in life, you'll always have more. - Oprah Winfrey"
+  "Oh yeah, oohing and ahhing, that's how it always starts, but later there's the running and screaming. ~ Jeff Goldblum",
+  "Yeah but your scientists were so preoccupied with whether or not they could they didn't stop to think if they should. ~ Jeff Goldblum",
+  "He was a great man. And he was also me. ~ Jeff Goldblum",
+  "As soon as you're interested in what is good taste, then you're in bad taste land already. What's comfortable and what represents your life, what's unique and individual about you, that's style. ~ Jeff Goldblum",
+  "I, uh, don't think I'm, y'know, so different than your average, y'know, average. ~ Jeff Goldblum",
 ];
 
-app.get('/quotes', (req, res) => {
+app.get("/quotes", (req, res) => {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   res.json({ quote: quotes[randomIndex] });
 });

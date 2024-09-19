@@ -3,9 +3,13 @@ import { useState } from 'react'
 export default function Slideshow() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
-    '/placeholder.svg?height=400&width=600',
-    '/placeholder.svg?height=400&width=600',
-    '/placeholder.svg?height=400&width=600'
+    '../images/JG1.webp',
+    '../images/JG2.webp',
+    '../images/JG3.jpg',
+    '../images/JG4.jpg',
+    '../images/JG5.jpg',
+    '../images/JG6.jpg',
+    '../images/JG7.jpg',
   ]
 
   const nextSlide = () => {
@@ -17,9 +21,10 @@ export default function Slideshow() {
   }
 
   return (
-    <div>
-      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-      <div>
+    <div className='slideshow'>
+      <h3>Our Golden Oldie Through the Years</h3>
+      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className="slideshow-image" />
+      <div className='arrows'>
         <button onClick={prevSlide}>
           &#8249;
         </button>

@@ -1,3 +1,4 @@
+import './App.css';
 import Header from './components/Header'
 import ApiButton from './components/ApiButton'
 import Slideshow from './components/Slideshow'
@@ -9,7 +10,6 @@ export default function App() {
     <div>
       <Header />
       <main>
-        <h2>Welcome to My Vite App</h2>
         <ApiButton />
         <Slideshow />
         <FavouriteButton />
