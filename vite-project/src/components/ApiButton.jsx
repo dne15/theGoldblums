@@ -5,7 +5,7 @@ export default function ApiButton() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://api.example.com/data')
+      const response = await fetch('http://localhost:3000/api/quotes')
       const result = await response.json()
       setData(result)
     } catch (error) {
