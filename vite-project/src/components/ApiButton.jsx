@@ -5,7 +5,7 @@ export default function ApiButton() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:????/api/quotes')
+      const response = await fetch('https://api.example.com/data')
       const result = await response.json()
       setData(result)
     } catch (error) {
@@ -14,12 +14,22 @@ export default function ApiButton() {
   }
 
   return (
-    <div>
-      <button onClick={fetchData}>
+    <div style={{ marginTop: '1rem' }}>
+      <button 
+        onClick={fetchData}
+        style={{
+          backgroundColor: '#4a5568',
+          color: 'white',
+          padding: '0.5rem 1rem',
+          border: 'none',
+          borderRadius: '0.25rem',
+          cursor: 'pointer'
+        }}
+      >
         Fetch Data
       </button>
       {data && (
-        <div>
+        <div style={{ marginTop: '0.5rem' }}>
           <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
       )}

@@ -17,13 +17,13 @@ export default function Slideshow() {
   }
 
   return (
-    <div>
-      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-      <div>
-        <button onClick={prevSlide}>
+    <div style={{ position: 'relative', width: '100%', maxWidth: '600px', margin: '1rem auto' }}>
+      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: 'auto' }} />
+      <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', padding: '0 1rem' }}>
+        <button onClick={prevSlide} style={{ backgroundColor: 'rgba(255,255,255,0.5)', border: 'none', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer' }}>
           &#8249;
         </button>
-        <button onClick={nextSlide}>
+        <button onClick={nextSlide} style={{ backgroundColor: 'rgba(255,255,255,0.5)', border: 'none', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer' }}>
           &#8250;
         </button>
       </div>
