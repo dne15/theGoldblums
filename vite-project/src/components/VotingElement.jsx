@@ -12,12 +12,12 @@ export default function VotingElement() {
   }
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem' }}>
-      <button onClick={upvote} style={{ backgroundColor: 'white', border: '1px solid #4a5568', borderRadius: '50%', width: '30px', height: '30px', cursor: 'pointer' }}>
+    <div>
+      <button onClick={upvote}>
         ▲
       </button>
-      <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{votes}</span>
-      <button onClick={downvote} style={{ backgroundColor: 'white', border: '1px solid #4a5568', borderRadius: '50%', width: '30px', height: '30px', cursor: 'pointer' }}>
+      <span>{votes}</span>
+      <button onClick={downvote}>
         ▼
       </button>
     </div>
