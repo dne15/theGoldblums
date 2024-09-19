@@ -1,20 +1,26 @@
 import { useState } from 'react'
-import { Button } from "@/components/ui/button"
 
 export default function FavouriteButton() {
-  const [isFavourite, setIsfavourite] = useState(false)
+  const [isfavourite, setIsfavourite] = useState(false)
 
   const togglefavourite = () => {
     setIsfavourite((prev) => !prev)
   }
 
   return (
-    <Button 
+    <button 
       onClick={togglefavourite} 
-      variant={isFavourite ? "default" : "outline"}
-      className="mt-4"
+      style={{
+        backgroundColor: isfavourite ? '#4a5568' : 'white',
+        color: isfavourite ? 'white' : '#4a5568',
+        border: '1px solid #4a5568',
+        padding: '0.5rem 1rem',
+        borderRadius: '0.25rem',
+        cursor: 'pointer',
+        marginTop: '1rem'
+      }}
     >
-      {isFavourite ? 'Remove from favourites' : 'Add to favourites'}
-    </Button>
+      {isfavourite ? 'Remove from favourites' : 'Add to favourites'}
+    </button>
   )
 }

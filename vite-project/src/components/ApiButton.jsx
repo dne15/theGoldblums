@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Button } from "@/components/ui/button"
 
 export default function ApiButton() {
   const [data, setData] = useState(null)
@@ -15,10 +14,22 @@ export default function ApiButton() {
   }
 
   return (
-    <div className="mt-4">
-      <Button onClick={fetchData}>Fetch Data</Button>
+    <div style={{ marginTop: '1rem' }}>
+      <button 
+        onClick={fetchData}
+        style={{
+          backgroundColor: '#4a5568',
+          color: 'white',
+          padding: '0.5rem 1rem',
+          border: 'none',
+          borderRadius: '0.25rem',
+          cursor: 'pointer'
+        }}
+      >
+        Fetch Data
+      </button>
       {data && (
-        <div className="mt-2">
+        <div style={{ marginTop: '0.5rem' }}>
           <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
       )}

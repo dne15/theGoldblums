@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Button } from "@/components/ui/button"
 
 export default function Slideshow() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -18,21 +17,15 @@ export default function Slideshow() {
   }
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto mt-4">
-      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className="w-full h-auto" />
-      <div className="absolute top-1/2 transform -translate-y-1/2 left-0 right-0 flex justify-between px-4">
-        <Button onClick={prevSlide} variant="outline" size="icon">
-          <span className="sr-only">Previous slide</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </Button>
-        <Button onClick={nextSlide} variant="outline" size="icon">
-          <span className="sr-only">Next slide</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </Button>
+    <div style={{ position: 'relative', width: '100%', maxWidth: '600px', margin: '1rem auto' }}>
+      <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: 'auto' }} />
+      <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', padding: '0 1rem' }}>
+        <button onClick={prevSlide} style={{ backgroundColor: 'rgba(255,255,255,0.5)', border: 'none', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer' }}>
+          &#8249;
+        </button>
+        <button onClick={nextSlide} style={{ backgroundColor: 'rgba(255,255,255,0.5)', border: 'none', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer' }}>
+          &#8250;
+        </button>
       </div>
     </div>
   )
