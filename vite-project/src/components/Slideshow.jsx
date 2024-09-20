@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 
+// * A React component that displays a slideshow of images.
+
+// * The images are stored in an array and the current index is tracked in state.
 export default function Slideshow() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
@@ -16,18 +19,18 @@ export default function Slideshow() {
     '/images/JG11.jpg',
     '/images/JG12.webp',
     '/images/JG13.jpg',
-  
- 
   ]
-
+// * The slideshow automatically cycles through the images every 3 seconds.
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 3000) // Slide changes every 3 seconds
 
+    //* When the component is unmounted, the interval is cleared to prevent memory leaks.
     return () => clearInterval(interval) // Cleanup on unmount
   }, [slides.length])
 
+  // Header plus the slideshow container
   return (
     <div className='slideshow-wrapper'>
       <h3 className="slideshow-title">Our Golden Oldie Through the Years</h3>

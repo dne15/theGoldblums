@@ -1,3 +1,8 @@
+/**
+ * Renders a voting element with up and down vote buttons and a vote count display.
+ * The component uses the `useState` hook to manage the vote count state.
+ * The `upvote` and `downvote` functions update the vote count when the corresponding button is clicked.
+ */
 import { useState } from 'react'
 
 export default function VotingElement() {

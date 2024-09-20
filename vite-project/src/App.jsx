@@ -1,3 +1,6 @@
+/**
+ * The main App component that renders the application's header, API button, slideshow, favorite button, and voting element.
+ */
 import './App.css';
 import Header from './components/Header'
 import ApiButton from './components/ApiButton'

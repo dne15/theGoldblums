@@ -4,6 +4,10 @@ import { useEffect } from "react";
 export default function ApiButton() {
   const [data, setData] = useState(null);
 
+  //* When the component mounts, it calls the `fetchData` function to fetch a quote from the API.
+  //* The fetched quote is then displayed in the component's JSX.
+  //* The component also includes a button that, when clicked, calls the `fetchData` function to fetch a new quote.
+  
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:3000/quotes");
