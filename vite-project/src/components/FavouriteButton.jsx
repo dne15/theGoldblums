@@ -15,7 +15,7 @@ export default function FavouriteButton() {
   }
 
   return (
-    <button onClick={toggleFavourite}>
+    <button className="favourite-button" onClick={toggleFavourite}>
       {isFavourite ? 'Remove from favourites' : 'Add to favourites'}
     </button>
   )

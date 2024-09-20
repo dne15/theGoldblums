@@ -126,17 +126,31 @@ header::before {
   font-family: "Courier New", Courier, monospace;
 }
 
+.favourite-button {
+  padding: 10px 20px;
+  margin: 10px auto; /* Changed from `margin: 10px 0;` to center horizontally */
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px; /* Reduced border radius */
+  background-color: #4CAF50; /* Original green color */
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  display: block; /* Ensures the button takes the full width available */
+}
 .favourite-button:hover {
   background-color: #45a049;
 }
 
 /* Voting Element Styling */
 .voting-element {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0; /* Added margin for spacing */
-}
+    display: flex;
+    justify-content: center; /* Centers the buttons and vote count horizontally */
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0; /* Maintains vertical spacing */
+  }
+
 
 .voting-element button {
   background-color: #f0ad4e;

@@ -17,7 +17,7 @@ export default function VotingElement() {
   }
 
   return (
-    <div>
+    <div className="voting-element">
       <button onClick={upvote}>
         ▲
       </button>
