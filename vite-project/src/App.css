@@ -86,7 +86,8 @@ header::before {
   text-align: center;
   font-size: 1.5rem;
   font-family: "Courier New", Courier, monospace;
-  margin-bottom: 10px;
+  margin: 20px 0;
+  padding: 10px;
 }
 
 /* Generate Button Styling */
